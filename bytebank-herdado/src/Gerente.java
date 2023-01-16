@@ -32,6 +32,7 @@ public class Gerente extends Funcionario {
 
     //aqui temos uma REESCRITA DE UM MÉTODO DA CLASSE MÃE
     public double getBonificacao() {
+        //System.out.println("chamando o método do gerente");
         return super.getBonificacao() + super.getSalario(); //super pois a variável está definida na classe mãe
     }
 
