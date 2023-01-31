@@ -1,15 +1,18 @@
-public class Funcionario {
+
+//não pode instanciar dessa classe pq é abstrata
+public abstract class Funcionario {
 
     private String nome;
     private String cpf;
     private double salario; //o ideal sempre é ser private
 
-    public double getBonificacao(){
-        //perceba que dessa forma abaixo, o texto seria printado ao chamar os métodos filhos de getBonificacao,
-        //pois nos tipos Gerente e Editor de vídeo eu chamo o getBonificacao de Funcionario usando "super"
-        //System.out.println("Chamando o método do funcionário");
-        return this.salario * 0.05;
-    }
+
+
+    public abstract double getBonificacao();
+    //abstract no método, mostra que ele não há implementação, o
+    //método não tem corpo, logo os filhos devem implementar esse método
+    //só posso colocar métodos abstratos se a classe for abstrata
+
 
     public String getNome() {
         return this.nome;

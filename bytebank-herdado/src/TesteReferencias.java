@@ -7,9 +7,6 @@ public class TesteReferencias {
         g2.setNome("Marcelo");
         g2.setSalario(5000.0);
 
-        Funcionario f = new Funcionario();
-        f.setSalario(2000.0);
-
         EditorVideo ev = new EditorVideo();
         ev.setSalario(2500.0);
 
@@ -18,7 +15,6 @@ public class TesteReferencias {
 
         ControleBonificacao controle = new ControleBonificacao();
         controle.registra(g2);
-        controle.registra(f);
         controle.registra(ev);
         controle.registra(d);
 
@@ -26,6 +22,8 @@ public class TesteReferencias {
         // Reutilização de código e
         // Polimorfismo(Em que Referências de tipos de classes mais genéricas referenciem objetos mais específicos)
 
-        System.out.println(controle.getSoma() + " " + g2.getBonificacao() + " " + f.getBonificacao() + " " + ev.getBonificacao() + " " + d.getBonificacao());
+        //System.out.println(controle.getSoma() + " " + g2.getBonificacao() + " " + ev.getBonificacao() + " " + d.getBonificacao());
+
+        System.out.println(controle.getSoma());
     }
 }

@@ -1,12 +1,12 @@
 public class TestaFuncionario {
     public static void main(String[] args) {
 
-        Funcionario funcionario = new Funcionario();
-        funcionario.setNome("Nico Steppot");
-        funcionario.setCpf("283.819.273-08");
-        funcionario.setSalario(2600.00);
+        Gerente gerente = new Gerente();
+        gerente.setNome("Nico Steppot");
+        gerente.setCpf("283.819.273-08");
+        gerente.setSalario(2600.00);
 
-        System.out.println(funcionario.getNome());
-        System.out.println(funcionario.getBonificacao());
+        System.out.println(gerente.getNome());
+        System.out.println(gerente.getBonificacao());
     }
 }
