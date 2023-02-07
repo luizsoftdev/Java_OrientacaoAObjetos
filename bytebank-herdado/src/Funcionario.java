@@ -7,7 +7,6 @@ public abstract class Funcionario {
     private double salario; //o ideal sempre é ser private
 
 
-
     public abstract double getBonificacao();
     //abstract no método, mostra que ele não há implementação, o
     //método não tem corpo, logo os filhos devem implementar esse método

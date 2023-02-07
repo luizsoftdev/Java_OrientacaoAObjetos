@@ -1,18 +1,25 @@
 
 //Ao herdar, a classe filha ganha todas as
 // características (atributos) e todas as funcionalidades (métodos)
-// da classe mãe
-public class Gerente extends FuncionarioAutenticavel {
+// da classe mãe. ATENÇÃO: JAVA NÃO POSSUI HERANÇA MÚLTIPLA
+public class Gerente extends Funcionario implements Autenticavel {
 
-    //extends = Gerente é um funcionário. Gerente herda do funcionário
+    //extends = Gerente é um funcionário. Gerente herda da class funcionário e implementa a Interface Autenticavel
 
-//    public boolean autentica(int senha) {
-//        if (this.senha == senha) {
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    }
+    private int senha;
+
+    @Override
+    public void setSenha(int senha){
+        this.senha = senha;
+    }
+    @Override
+    public boolean autentica(int senha) {
+        if (this.senha == senha) {
+            return true;
+        } else {
+           return false;
+       }
+    }
 //
 //    private String login;
 //    //Um novo método, que pode variar na quantidade ou tipos
