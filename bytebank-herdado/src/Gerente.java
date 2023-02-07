@@ -6,19 +6,18 @@ public class Gerente extends Funcionario implements Autenticavel {
 
     //extends = Gerente é um funcionário. Gerente herda da class funcionário e implementa a Interface Autenticavel
 
-    private int senha;
+    private AutenticacaoUtil util;
 
+    public Gerente(){
+        this.util = new AutenticacaoUtil();
+    }
     @Override
     public void setSenha(int senha){
-        this.senha = senha;
+        this.util.setSenha(senha);
     }
     @Override
     public boolean autentica(int senha) {
-        if (this.senha == senha) {
-            return true;
-        } else {
-           return false;
-       }
+        return this.util.autentica(senha);
     }
 //
 //    private String login;

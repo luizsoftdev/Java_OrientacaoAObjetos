@@ -5,19 +5,14 @@ public class Administrador extends Funcionario implements Autenticavel{
         return 50;
     }
 
-
-    private int senha;
+    private AutenticacaoUtil util;
     @Override
     public void setSenha(int senha) {
-        this.senha = senha;
+        this.util.setSenha(senha);
     }
 
     @Override
     public boolean autentica(int senha) {
-        if (this.senha == senha) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.util.autentica(senha);
     }
 }

@@ -1,5 +1,5 @@
 //Herdamos os métodos e atributos de Conta, mas não herdamos seus construtores!
-public class ContaCorrente extends Conta{
+public class ContaCorrente extends Conta implements Tributavel{
 
     public ContaCorrente(int agencia, int numero) {
         super(agencia, numero);
@@ -16,5 +16,8 @@ public class ContaCorrente extends Conta{
         return super.saca(valorASacar);
     }
 
-
+    @Override
+    public double getValorImposto() {
+        return super.saldo * 0.01;
+    }
 }
